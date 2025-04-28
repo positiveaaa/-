@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页模板</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="page.css">
+
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <!-- 左侧文字 -->
+        <div class="logo">    火把节</div>
+        <!-- 中间导航链接 -->
+        <div class="nav-links">
+            <a href="../index.html" >首页</a>
+            <a href="../culture/culture.html">火把节文化</a>
+            <a href="study.html" class="active">学习与研究</a>
+            <a href="../portect/protect.html">保护与传承</a>
+            <a href="../community/community.html">互动社区</a>
+
+        </div>
+        <!-- 右侧搜索框 -->
+        <div class="search-box">
+            <input type="text" placeholder="search">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill="#d6bcb2"
+                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- 火把节申遗历程 -->
+    <div class="container1">
+        <div class="header">火把节申遗历程</div>
+        <!-- <div class="content"> -->
+            <div class="timeline">
+                <svg width="100%">
+                    <!-- 使用 transform 平移整个 SVG 内容 -->
+                    <g transform="translate(20, 0)">
+                        <!-- 蜿蜒曲线：5 段贝塞尔曲线拼接，时间节点位于顶点 -->
+                        <path d="M150,350 C300,50 350,400 450,250 
+                                 C550,50 650,450 750,250
+                                 C850,50 950,450 1050,250"
+                              stroke="#984f31"
+                              stroke-width="4"
+                              stroke-dasharray="4,8"
+                              stroke-linecap="round"
+                              fill="none" />
+                
+                        <!-- 时间节点：位于曲线的顶点 -->
+                        <circle cx="160" cy="330" r="8" />
+                        <circle cx="500" cy="195" r="8" />
+                        <circle cx="700" cy="305" r="8" />
+                        <circle cx="810" cy="195" r="8" />
+                
+                        <!-- 时间节点文字 -->
+                        <text x="170" y="360">2003</text>
+                        <text x="500" y="180">2006</text>
+                        <text x="700" y="335">2008</text>
+                        <text x="810" y="180">2015</text>
+                
+                        <!-- 时间节点旁边的描述文字 -->
+                        <text class="node-text" x="170" y="380">四川凉山成立“火把节文化保护协会”，启动系统性田野调查</text>
+                        <text class="node-text" x="500" y="155">国务院批准火把节列入首批国家级非物质文化遗产名录</text>
+                        <text class="node-text" x="700" y="355">《云南省非物质文化遗产保护条例》（2008）明确火把节为“重点保护项目</text>
+                        <text class="node-text" x="810" y="155">凉山州颁布《火把节传统习俗保护二十条</text>
+                    </g>
+                </svg>
+            </div>
+        <!-- </div> -->
+    </div>
+    <!-- <div class="blank"></div> -->
+    <!-- 传承人故事 -->
+    <div class="container2">
+        <div class="left">
+            <!-- 主图容器 -->
+            <div class="main-image-container">
+                <img id="mainImage" src="图一.jpg" alt="主图">
+            </div>
+            
+            <!-- 缩略图组 -->
+            <div class="thumbnails">
+                <div class="thumbnail large active" 
+                     data-image="图一.jpg" 
+                     data-name="普顺发"
+                     data-text="普顺发：毕摩世家的传承者普顺发，1936年10月出生在禄丰县高峰乡大花箐村，是一位远近闻名的彝族毕摩。他出生于一个毕摩世家，父亲和祖父都是当地有名的毕摩。尽管家境贫寒，普顺发的父亲坚持要他念书，学习古汉文和彝文经书，以及祭祀知识、大刀制作、火把制作、脸谱制作，学习彝族大刀舞表演。普顺发不仅自己精通这些技艺，还以言传身教的方式，培养了40多名传承人，包括胡金富、普林爱等。他的故事体现了对彝族传统文化的深厚情感和不懈追求。普顺发多年来一直是当地彝族火把节的主祭师。">
+                    <img src="图一.jpg" alt="缩略图1">
+                </div>
+                <div class="thumbnail small" 
+                     data-image="图二.jpg" 
+                     data-name="张成兴"
+                     data-text="张成兴：大锣笙舞的守护者张成兴，1951年生，是双柏县法裱镇李方村的彝族毕摩。因家境贫寒，没有上过几年书，14岁开始拜当地民间老艺人张福林、张红旺为师，开始学习毕摩祭祀、大锣笙舞等各种技艺。成年后熟练掌握彝族火把节的整套祭祀活动和大锣笙舞蹈的的套路，1990年开始担任乡间邻里祭祀主持，开展各种祭祀活动。李方村火把节活动十分隆重，节期一般为三到五天。每年的火把节，张成兴都要带领村民进行请火神、祭祖先、祭龙神、祭山神、祭树神、祭牧神、送火神、念祈福经、跳大锣笙舞、跳花鼓舞、三弦舞、四弦舞，唱山歌、对调子等一系列传统民俗文化活动，其中，大锣笙舞是整个火把节活动的重头戏。">
+                    <img src="图二.jpg" alt="缩略图2">
+                </div>
+                <div class="thumbnail small" 
+                     data-image="图三.jpg" 
+                     data-name="何应贵"
+                     data-text="何应贵：羊皮鼓舞的传承人何应贵，一个普通的农民，在家乡那一片热土上，带领他的徒弟们，守望着精神文化家园，为优秀民族民间传统文化的保护和传承一直坚持不懈努力着。何应贵十分重视传艺带徒，目前已培养传带徒弟有10余人，其中，罗金华、何乔寿、李万桥、何长顺、何志强就是他的得意门生，所传弟子个个均有所建树。还常年坚持在岔河州立民族小学开展羊皮鼓舞进校园传授技艺活动。何应贵熟悉掌握彝族土主祭祀礼仪，吟唱经文和羊皮鼓舞技艺娴熟，内容丰富而全面，通晓民俗祭祀礼仪知识，除土主祭祀礼仪外，还掌握彝族毕摩祭祀礼仪等诸多的传统文化内容。">
+                    <img src="图三.jpg" alt="缩略图3">
+                </div>
+                <div class="thumbnail small" 
+                     data-image="图四.jpg" 
+                     data-name="李茂森"
+                     data-text="李茂森，男，彝族，1957年10月生，武定县白路乡平地村委会小平地村人，彝族毕摩，精通彝族文字。他的故事是关于坚守和传承的故事。李茂森从小就对彝族文化有着浓厚的兴趣，他的父亲是一位受人尊敬的毕摩，李茂森在父亲的熏陶下，对毕摩的祭祀仪式和文化传承有了深刻的理解。他不仅学习了彝族的文字，还深入研究了毕摩的祭祀仪式和经文，成为了一名真正的毕摩。李茂森的毕摩之路并非一帆风顺。在现代社会，许多人对传统文化的重视程度逐渐降低，毕摩的地位和作用也受到了挑战。然而，李茂森始终坚持自己的信仰和责任，他不仅在家乡主持各种祭祀活动，还积极参与火把节的组织和传承工作。他希望通过自己的努力，让更多的人了解和尊重彝族的传统文化。">
+                    <img src="图四.jpg" alt="缩略图4">
+                </div>
+                <div class="thumbnail small" 
+                     data-image="图五.jpg" 
+                     data-name="胡金富"
+                     data-text="胡金富，男，彝族，1959年2月生，禄丰县高峰乡海联村委会小花箐村人，彝族火把节大刀舞代表性传承人。胡金富的故事是关于传承和创新的故事。他从小就对彝族的大刀舞有着浓厚的兴趣，他的父亲是一位技艺高超的大刀舞者，胡金富在父亲的教导下，学会了大刀舞的基本动作和技巧。他不仅继承了父亲的技艺，还在此基础上进行了创新和发展，使大刀舞更加丰富多彩。胡金富的大刀舞之路也充满了挑战。在现代社会，许多人对传统的舞蹈艺术不再感兴趣，大刀舞的传承也面临着困境。然而，胡金富始终坚持自己的信仰和责任，他不仅在家乡传承大刀舞，还积极参与火把节的表演和推广工作。他希望通过自己的努力，让更多的人了解和欣赏彝族的大刀舞。">
+                    <img src="图五.jpg" alt="缩略图5">
+                </div>
+                <div class="thumbnail small" 
+                     data-image="图六.jpg" 
+                     data-name="王秀平"
+                     data-text="王秀平，77岁，出生于贵州省赫章县的布摩世家，是彝族火把节的国家级非物质文化遗产代表性传承人。他的家族传承至今已有109代，而他则是第六批国家级非物质文化遗产代表性传承人。王秀平自幼便浸润在布摩文化的深厚底蕴中，他不仅深谙彝族布摩的经典、天文历法及习俗，尤其对火把节的祭祀礼仪谙熟于心。彝族火把节，彝语称之为"朵则吉"，源于彝族十月太阳历，根据彝族十月太阳历来定，最初的过节时间是夏至日，但随着时代的变更、文化的发展，目前具体过节时间因地而异，大多数地方一般在与夏至日相近的农历六月二十四日举行。">
+                    <img src="图六.jpg" alt="缩略图6">
+                </div>
+            </div>
+        </div>
+        
+        <div class="right">
+            <div class="text-container">
+                <div class="name-box" id="nameDisplay">普顺发</div>
+                <p id="imageDescription">普顺发：毕摩世家的传承者普顺发，1936年10月出生在禄丰县高峰乡大花箐村，是一位远近闻名的彝族毕摩。他出生于一个毕摩世家，父亲和祖父都是当地有名的毕摩。尽管家境贫寒，普顺发的父亲坚持要他念书，学习古汉文和彝文经书，以及祭祀知识、大刀制作、火把制作、脸谱制作，学习彝族大刀舞表演。普顺发不仅自己精通这些技艺，还以言传身教的方式，培养了40多名传承人，包括胡金富、普林爱等。他的故事体现了对彝族传统文化的深厚情感和不懈追求。普顺发多年来一直是当地彝族火把节的主祭师。每年农历六月二十四前十多天，普顺发就开始带领徒弟制作大刀</p>
+            </div>
+        </div>
+    </div>
+    <!-- 保护措施 -->
+    <div class="container3">
+        <div class="top">
+            <div class="topText">保护措施</div>
+        </div>
+        <div class="middle-container">
+            <div class="middle">
+                <div class="image-box">
+                    <div class="box">
+                        <img src="news1.png" alt="图片1">
+                        <div class="image-caption"><a href="https://m.toutiao.com/is/EBYll_B8Y04/" target="_blank" class="news-link">
+                            【即日起 石林每周五、六晚都可以过"火把节" - 今日头条】
+                        </a></div>
+                    </div>
+                </div>
+                <div class="image-box">
+                    <div class="box">
+                        <img src="news2.png" alt="图片1">
+                        <div class="image-caption"><a href="https://m.toutiao.com/is/92s5c8hcEeY/" target="_blank" class="news-link">
+                            【视频|入选十大年例，旺利火把节超燃现场→ - 今日头条】
+                        </a></div>
+                    </div>
+                </div>
+                <div class="image-box">
+                    <div class="box">
+                        <img src="news3.png" alt="图片1">
+                        <div class="image-caption"><a href="https://m.toutiao.com/is/dFqHxpx7sUA/" target="_blank" class="news-link">
+                            【“火舞黄柏，共祈鸿运”，火把节燃爆新春希望！ - 今日头条】
+                        </a></div>
+                    </div>
+                </div>
+                <div class="image-box">
+                    <div class="Textpad"></div>
+                   <div class="Text"><a href="https://m.toutiao.com/is/adytnJKfzCU/" target="_blank" class="news-link">
+                    【游草龙、泼铁水、田间“偷青”……璧山历山汉族火把节好闹热！ - 今日头条】
+                </a></div>
+                   <div class="Textpad"></div>
+                   <div class="Text"><a href="https://m.toutiao.com/is/v4-BFfbY7vU/" target="_blank" class="news-link">
+                    【2024年彝族火把节如期而至 这个夏天，凉山超“火”的！ - 今日头条】
+                </a></div>
+                   <div class="Textpad"></div>
+                   <div class="Text"><a href="https://m.toutiao.com/is/fzQgSwPBovQ/" target="_blank" class="news-link">
+                    【清凉夏日，燃情火把！来西昌过不一样的火把节 - 今日头条】
+                </a></div>
+                </div>
+                
+                
+            </div>
+           
+            <div class="bottom">
+                <a href="#" class="button">查看全部</a>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+
+    <!-- 板块6: 联系我们 -->
+    <div class="footer">
+        <div class="footer-content">
+  
+            <div class="footer-row">
+                <h4>网站服务</h4>
+                <h4>关于我们</h4>
+                <h4>联系我们</h4>
+            </div>
+
+            <div class="footer-row">
+                <a href="#">快速导航</a>
+                <a href="#">公司介绍</a>
+                <a href="#">用户服务</a>
+            </div>
+
+            <div class="footer-row">
+                <a href="#">非遗地图</a>
+                <p>客服邮箱：XXXXXXX@XXX</p>
+            </div>
+     
+            <div class="footer-row">
+                <a href="#">网站访问</a>
+                <a href="#">位置咨询</a>
+            </div>
+        </div>
+  
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            <a href="#">相关链接</a>
+            <a href="#">隐私政策</a>
+            <a href="#">版权声明</a>
+            <a href="#">留言板</a>
+        </div>
+    </div>
+</body>
+
+<script>
+    function changeContent(index) {
+        // 示例：根据点击的圆形更新内容
+        const contents = [
+            "这里是第一段文字内容描述",
+            "这里是第二段文字内容描述",
+            "这里是第三段文字内容描述",
+            "这里是第四段文字内容描述",
+            "这里是第五段文字内容描述",
+            "这里是第六段文字内容描述",
+            "这里是第七段文字内容描述"
+        ];
+        
+        document.getElementById('contentText').innerHTML = `<p>${contents[index-1]}</p>`;}
+        
+        // 更新激活状态
+        document.addEventListener('DOMContentLoaded', function() {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const mainImage = document.getElementById('mainImage');
+            const imageDescription = document.getElementById('imageDescription');
+            const nameDisplay = document.getElementById('nameDisplay');
+            
+            // 初始化显示第一个缩略图对应的大图、名字和文字
+            const firstThumb = document.querySelector('.thumbnail.active');
+            mainImage.src = firstThumb.dataset.image;
+            nameDisplay.textContent = firstThumb.dataset.name;
+            imageDescription.textContent = firstThumb.dataset.text;
+            
+            thumbnails.forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    // 1. 移除所有active类
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    
+                    // 2. 添加active类到当前点击的缩略图
+                    this.classList.add('active');
+                    
+                    // 3. 交换大小缩略图
+                    if (this.classList.contains('small')) {
+                        const currentLarge = document.querySelector('.thumbnail.large');
+                        currentLarge.classList.replace('large', 'small');
+                        this.classList.replace('small', 'large');
+                    }
+                    
+                    // 4. 更新主图（带淡入淡出动画）
+                    mainImage.style.opacity = 0;
+                    setTimeout(() => {
+                        mainImage.src = this.dataset.image;
+                        mainImage.alt = this.querySelector('img').alt;
+                        mainImage.style.opacity = 1;
+                    }, 300);
+                    
+                    // 5. 更新名字和文字（带淡入淡出动画）
+                    nameDisplay.style.opacity = 0;
+                    imageDescription.style.opacity = 0;
+                    setTimeout(() => {
+                        nameDisplay.textContent = this.dataset.name;
+                        imageDescription.textContent = this.dataset.text;
+                        nameDisplay.style.opacity = 1;
+                        imageDescription.style.opacity = 1;
+                    }, 300);
+                });
+            });
+        });
+    </script>

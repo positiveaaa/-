@@ -1,0 +1,456 @@
+html {
+    width: 100%;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1920px; */
+}
+
+/* add----------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "SimSun", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    width: 100%;
+
+}
+
+    /* 导航栏样式 */
+    .navbar {
+        width: 1920px;
+        /* add----------------- */
+        width: 100%;
+        /* add----------------- */
+        height: 90px;
+        background-color: #9e9490;
+        /* 导航栏颜色调整 */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* padding-left: 20px; */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    /* 左侧文字 */
+    .navbar .logo {
+        font-family: "SimSun", serif;
+        text-indent: 2em;
+        font-size: 40px;
+        color: #fff;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    /* 中间导航链接 */
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar .nav-links a {
+        color: rgba(255, 255, 255, 0.6);
+        /* 未选中时透明度60% */
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: regular;
+        padding: 10px 15px;
+        transition: all 0.3s;
+        position: relative;
+    }
+
+    .navbar .nav-links a.active {
+        color: #ffffff;
+        /* 选中时颜色 */
+    }
+
+    /* 选中时的黄色下划线 */
+    .navbar .nav-links a.active::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        height: 3px;
+        background-color: rgb(145, 85, 17);
+
+    }
+
+    /* 右侧搜索框 */
+    .navbar .search-box {
+        display: flex;
+        align-items: center;
+        position: relative;
+        /* add----------------- */
+        right: 50px;
+        /* add----------------- */
+    }
+
+.navbar .search-box input[type="text"] {
+padding: 8px 20px;
+font-size: 16px;
+border: none;
+border-radius: 25px;
+outline: none;
+width: 150px;
+transition: width 0.3s;
+background-color: #6b6563;
+color: #ffffff; /* 修改：将文字颜色改为白色（或其他对比色） */
+}
+
+.navbar .search-box input[type="text"]::placeholder {
+color: #b0a6a2; /* 修改：占位符文字颜色（与搜索图标同色） */
+opacity: 0.8; /* 可选：降低透明度 */
+}
+
+    .navbar .search-box input[type="text"]:focus {
+        width: 280px;
+        /* 聚焦时更长 */
+    }
+
+    .navbar .search-box .search-icon {
+        position: absolute;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    /* 日历 */
+/* 重置页面默认边距 */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.fullscreen-image-container {
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.fullscreen-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* 照片轮播 */
+ /* 照片轮播容器 */
+ .photo-carousel {
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0px auto;
+    padding: 0 0px;
+    text-align: center;
+    background-color:rgb(227, 205, 175);
+}
+
+.gallery-title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    padding: 0 15%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    display: block;
+}
+
+.carousel-caption {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 24px;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.carousel-indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.indicator-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 30px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator-dot.active {
+    background-color: #9e9490;
+}
+
+/* 新闻 */
+.container3 {
+    width: 100%;
+    padding: 20px;
+    margin: 0px auto;
+    background-color: rgb(103, 35, 7);
+    border-radius: 8px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 标签页样式 */
+.tab-header {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    color: #fff;
+    font-weight: bold;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffcc00;
+}
+
+/* 内容区域样式 */
+.tab-content {
+    display: none;
+    color: #fff;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* 时间线样式 */
+.timeline {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.time-column {
+    width: 120px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.time {
+    font-size: 16px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.time::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+}
+
+.vertical-line {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.content-column {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.news-item {
+    margin-bottom: 25px;
+}
+
+.news-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.news-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+      .footer {
+    width: 100%;
+    height: 400px; /* 原714px，高度减少约44% */
+    background-color: #A0522D; 
+    position: relative;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    width: 80%; /* 使内容宽度自适应 */
+    max-width: 889px; /* 设置最大宽度 */
+    height: 160px; /* 原200px */
+    position: absolute;
+    left: 50%; /* 将其定位到屏幕中间 */
+    transform: translateX(-50%); /* 使其水平居中 */
+    top: 80px; /* 原141px */
+    color: #FFFFFF;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px; /* 原20px */
+}
+
+.footer-row h4 {
+    font-size: 18px; /* 原24px */
+    font-weight: 500;
+    margin: 0;
+    width: 180px; /* 原232px */
+    text-align: left;
+}
+
+.footer-row a {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7); /* 70% 透明度 */
+    text-decoration: none;
+    width: 180px;
+    text-align: left;
+}
+
+.footer-row a:hover {
+    color: #FFFFFF; /* 悬停时变为白色 */
+}
+
+.footer-row p {
+    font-size: 16px; /* 原22px */
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7); /* 70% 透明度 */
+    margin: 0;
+    width: 180px; /* 原232px */
+    text-align: left;
+}
+
+.footer-divider {
+    width: 90%; /* 设置宽度为父容器的90% */
+    max-width: 1330px; /* 设置最大宽度 */
+    height: 1px;
+    background-color: #FFFFFF; /* 白色下划线 */
+    position: absolute;
+    left: 50%; /* 将其定位到屏幕中间 */
+    transform: translateX(-50%); /* 使其水平居中 */
+    top: 260px; /* 原423px *//* 距离顶部 141px + 235px + 37px */
+}
+
+.footer-bottom {
+    position: absolute;
+    left: 50%; /* 将其定位到屏幕中间 */
+    transform: translateX(-50%); /* 使其水平居中 */
+    top: 280px;  /* 距离顶部 141px + 235px + 37px + 27px */
+    display: flex;
+    gap: 40px; /* 列间距 52px */
+}
+
+.footer-bottom a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+}

@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <div class="navbar">
+    <!-- 左侧文字 -->
+    <div class="logo"> 火把节</div>
+    <!-- 中间导航链接 -->
+    <div class="nav-links">
+      <a href="../index.html">首页</a>
+      <a href="../culture/culture.html">火把节文化</a>
+      <a href="../study/study.html">学习与研究</a>
+      <a href="../portect/protect.html">保护与传承</a>
+      <a href="community.html" class="active">互动社区</a>
+
+    </div>
+    <!-- 右侧搜索框 -->
+    <div class="search-box">
+      <input type="text" placeholder="search">
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="#d6bcb2"
+          d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- 遇见火把节 -->
+  <div class="container1">
+    <div class="title">遇见~火把节 - 水火交融 大理西湖"水上火把节"狂欢</div>
+    <div class="content-box">
+      <div class="video-container">
+        <div class="main-video">
+
+          <video id="mainVideoPlayer" controls autoplay muted>
+            <source src="素材图/视频1.mp4" type="video/mp4">
+            您的浏览器不支持视频标签
+          </video>
+        </div>
+      </div>
+      <div class="video-links">
+        <div class="link-line active" data-video="素材图/视频1.mp4" data-title="水火交融 大理西湖" 水上火把节"狂欢">
+          水火交融 大理西湖"水上火把节"狂欢
+        </div>
+        <div class="link-line" data-video="素材图/视频2.mp4" data-title="凉山火把节：火舞狂欢不夜天">
+          凉山火把节：火舞狂欢不夜天
+        </div>
+        <div class="link-line" data-video="素材图/视频3.mp4" data-title="火把节继续！在凉山会东县感受传统民俗的速度与激情">
+          火把节继续！在凉山会东县感受传统民俗的速度与激情
+        </div>
+        <div class="link-line" data-video="素材图/视频4.mp4" data-title="雄楚火把节火力全开">
+          雄楚火把节火力全开
+        </div>
+        <div class="link-line" data-video="素材图/视频5.mp4" data-title="彝族西昌火把节 熊熊篝火的狂欢">
+          彝族西昌火把节 熊熊篝火的狂欢
+        </div>
+        <div class="link-line" data-video="素材图/视频6.mp4" data-title="古老传说的凉山正上演“火舞阳坡”">
+          古老传说的凉山正上演“火舞阳坡”
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 趣味问答 -->
+  <div class="container2">
+    <div class="quiz-container">
+      <!-- 左箭头 -->
+      <div class="arrow left-arrow" id="prev-quiz">&#9664;</div>
+
+      <!-- 问题容器 -->
+      <div class="quiz-box active" data-quiz="1">
+        <div class="question-number">01</div>
+        <img src="素材图/问号.png" alt="右上角图片" class="top-image">
+        <div class="quiz-content">
+          <h3 class="quiz-title">趣味问答 1</h3>
+          <p class="quiz-text">云南：云南彝族火把节的起源传说为了纪念什么？</p>
+          <div class="quiz-options">
+            <div class="option">
+              <label for="option1-1">
+                <img src="素材图/选项原图.png" alt="选项1图片" class="option-image">
+                <span>A. 阿南夫人</span>
+              </label>
+              <input type="radio" id="option1-1" name="quiz1" value="1">
+            </div>
+            <div class="option">
+              <label for="option1-2">
+                <img src="素材图/选项原图.png" alt="选项2图片" class="option-image">
+                <span>B. 阿查和诺娜的爱情</span>
+              </label>
+              <input type="radio" id="option1-2" name="quiz1" value="2">
+            </div>
+            <div class="option">
+              <label for="option1-3">
+                <img src="素材图/选项原图.png" alt="选项3图片" class="option-image">
+                <span>C. 荞麦丰收</span>
+              </label>
+              <input type="radio" id="option1-3" name="quiz1" value="3">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 问题2 -->
+      <div class="quiz-box" data-quiz="2">
+        <div class="question-number">02</div>
+        <img src="素材图/问号.png" alt="右上角图片" class="top-image">
+        <div class="quiz-content">
+          <h3 class="quiz-title">趣味问答 2</h3>
+          <p class="quiz-text">贵州：贵州彝族火把节入选省级非物质文化遗产的时间是？ </p>
+          <div class="quiz-options">
+            <div class="option">
+              <label for="option2-1">
+                <img src="素材图/选项原图.png" alt="选项1图片" class="option-image">
+                <span> A. 2021年</span>
+              </label>
+              <input type="radio" id="option2-1" name="quiz2" value="1">
+            </div>
+            <div class="option">
+              <label for="option2-2">
+                <img src="素材图/选项原图.png" alt="选项2图片" class="option-image">
+                <span>B. 2024年</span>
+              </label>
+              <input type="radio" id="option2-2" name="quiz2" value="2">
+            </div>
+            <div class="option">
+              <label for="option2-3">
+                <img src="素材图/选项原图.png" alt="选项3图片" class="option-image">
+                <span>C. 2023年</span>
+              </label>
+              <input type="radio" id="option2-3" name="quiz2" value="3">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-box" data-quiz="3">
+        <div class="question-number">03</div>
+        <img src="素材图/问号.png" alt="右上角图片" class="top-image">
+        <div class="quiz-content">
+          <h3 class="quiz-title">趣味问答 3</h3>
+          <p class="quiz-text">四川：四川凉山彝族火把节的主要活动不包括以下哪一项？</p>
+          <div class="quiz-options">
+            <div class="option">
+              <label for="option3-1">
+                <img src="素材图/选项原图.png" alt="选项1图片" class="option-image">
+                <span>A. 竖立大火把</span>
+              </label>
+              <input type="radio" id="option3-1" name="quiz3" value="1">
+            </div>
+            <div class="option">
+              <label for="option3-2">
+                <img src="素材图/选项原图.png" alt="选项2图片" class="option-image">
+                <span>B. 跳铜鼓舞</span>
+              </label>
+              <input type="radio" id="option3-2" name="quiz3" value="2">
+            </div>
+            <div class="option">
+              <label for="option3-3">
+                <img src="素材图/选项原图.png" alt="选项3图片" class="option-image">
+                <span>C. 赛马</span>
+              </label>
+              <input type="radio" id="option3-3" name="quiz3" value="3">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-box" data-quiz="4">
+        <div class="question-number">04</div>
+        <img src="素材图/问号.png" alt="右上角图片" class="top-image">
+        <div class="quiz-content">
+          <h3 class="quiz-title">趣味问答 4</h3>
+          <p class="quiz-text">广西：广西彝族火把节又称什么？</p>
+          <div class="quiz-options">
+            <div class="option">
+              <label for="option4-1">
+                <img src="素材图/选项原图.png" alt="选项1图片" class="option-image">
+                <span>A. 荞年节</span>
+              </label>
+              <input type="radio" id="option4-1" name="quiz4" value="1">
+            </div>
+            <div class="option">
+              <label for="option4-2">
+                <img src="素材图/选项原图.png" alt="选项2图片" class="option-image">
+                <span>B. 星回节</span>
+              </label>
+              <input type="radio" id="option4-2" name="quiz4" value="2">
+            </div>
+            <div class="option">
+              <label for="option4-3">
+                <img src="素材图/选项原图.png" alt="选项3图片" class="option-image">
+                <span>C. 跳宫节</span>
+              </label>
+              <input type="radio" id="option4-3" name="quiz4" value="3">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- 右箭头 -->
+      <div class="arrow right-arrow" id="next-quiz">&#9654;</div>
+    </div>
+  </div>
+  <!-- 地图 -->
+  <div class="container3">
+    <div class="fires-container">
+      <div id="fire-map">
+        <img id="base-map" src="素材图/地图-中国-裁切版2-火苗地图蓝色版.png" alt="Base Map">
+        <img id="outline-map" src="素材图/地图-线-裁切版.png" alt="Outline Map">
+        <img class="area-image" src="素材图/地图-云南-cq-统一色.png" alt="云南" data-original-top="557" data-original-left="360"
+          data-original-width="179" data-original-height="185" data-intro="云南" data-new-src="素材图/地图-云南-cq-渐变.png">
+        <img class="area-image" src="素材图/地图-广西-cq-统一色 .png" alt="广西" data-original-top="630" data-original-left="509"
+          data-original-width="149" data-original-height="116" data-intro="广西" data-new-src="素材图/地图-广西-cq -渐变.png">
+        <img class="area-image" src="素材图/地图-贵州-cq-统一色.png" alt="贵州" data-original-top="563" data-original-left="490"
+          data-original-width="119" data-original-height="104" data-intro="贵州" data-new-src="素材图/地图-贵州-cq-渐变.png">
+        <img class="area-image" src="素材图/地图-四川-cq-统一色.png" alt="四川" data-original-top="449" data-original-left="381"
+          data-original-width="211" data-original-height="184" data-intro="四川" data-new-src="素材图/地图-四川-cq-渐变.png">
+      </div>
+    </div>
+    <div class="fire-info-boxes">
+      <div class="fire-info-box" id="fire-box1"></div>
+      <div class="fire-info-box" id="fire-box2"></div>
+    </div>
+    <div class="fire-from">我是来自</div>
+    <div class="fire">的小火苗</div>
+    <div class="ignite">为你的家乡点亮非遗传承之火吧！</div>
+
+  </div>
+  <!-- 留言板动画 -->
+  <div class="container4">
+    <div class="message-input-area">
+      <div class="message-header">留言墙</div>
+      <textarea class="message-input" placeholder="写下你的留言..."></textarea>
+      <div class="message-controls">
+        <div class="avatar-selection">
+          <span>选择头像:</span>
+          <div class="avatar-options">
+            <div class="avatar-option selected" data-avatar="1">👦</div>
+            <div class="avatar-option" data-avatar="2">👧</div>
+            <div class="avatar-option" data-avatar="3">🧑</div>
+            <div class="avatar-option" data-avatar="4">👩</div>
+            <div class="avatar-option" data-avatar="5">👨</div>
+            <div class="avatar-option" data-avatar="6">🧒</div>
+            <div class="avatar-option" data-avatar="7">👶</div>
+          </div>
+        </div>
+        <button class="send-button">发送</button>
+      </div>
+    </div>
+    <div class="message-wall" id="messageWall"></div>
+  </div>
+
+  <!-- 联系我们 -->
+  <!-- 板块6: 联系我们 -->
+  <div class="footer">
+    <div class="footer-content">
+
+      <div class="footer-row">
+        <h4>网站服务</h4>
+        <h4>关于我们</h4>
+        <h4>联系我们</h4>
+      </div>
+
+      <div class="footer-row">
+        <a href="#">快速导航</a>
+        <a href="#">公司介绍</a>
+        <a href="#">用户服务</a>
+      </div>
+
+      <div class="footer-row">
+        <a href="#">非遗地图</a>
+        <p>客服邮箱：XXXXXXX@XXX</p>
+      </div>
+
+      <div class="footer-row">
+        <a href="#">网站访问</a>
+        <a href="#">位置咨询</a>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <a href="#">相关链接</a>
+      <a href="#">隐私政策</a>
+      <a href="#">版权声明</a>
+      <a href="#">留言板</a>
+    </div>
+  </div>
+
+
+  <script>
+    // 视频播放动画
+    document.addEventListener('DOMContentLoaded', function () {
+      const videoPlayer = document.getElementById('mainVideoPlayer');
+      const videoLinks = document.querySelectorAll('.link-line');
+      const pageTitle = document.querySelector('.title');
+
+      // 初始化第一个视频
+      const firstVideo = document.querySelector('.link-line.active');
+      videoPlayer.src = firstVideo.dataset.video;
+      videoPlayer.load();
+
+      // 为每个链接添加点击事件
+      videoLinks.forEach(link => {
+        link.addEventListener('click', function () {
+          // 更新视频源
+          const videoSrc = this.dataset.video;
+          const videoTitle = this.dataset.title;
+
+          // 如果点击的是当前正在播放的视频，则不执行任何操作
+          if (videoPlayer.src.endsWith(videoSrc)) return;
+
+          // 更新视频
+          videoPlayer.src = videoSrc;
+          videoPlayer.load();
+          videoPlayer.play();
+
+          // 更新标题
+          pageTitle.textContent = `遇见~火把节 - ${videoTitle}`;
+
+          // 更新活跃状态
+          videoLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+
+      // 视频加载错误处理
+      videoPlayer.addEventListener('error', function () {
+        alert('视频加载失败，请检查视频路径是否正确');
+      });
+    });
+
+    // 留言板动画
+    document.addEventListener('DOMContentLoaded', function () {
+      const sendButton = document.querySelector('.send-button');
+      const messageInput = document.querySelector('.message-input');
+      const messageWall = document.getElementById('messageWall');
+      const avatarOptions = document.querySelectorAll('.avatar-option');
+
+      let selectedAvatar = '1';
+      const colorPalette = [
+        '#FFD1DC', '#FFECF1', '#FFF0F5', '#FFE4E1',
+        '#F8D5F0', '#F4B8E4', '#EF9CDD', '#E97FD5',
+        '#FFDFD3', '#FEC8D8', '#D291BC', '#E0BBE4'
+      ];
+
+      // 选择头像
+      avatarOptions.forEach(option => {
+        option.addEventListener('click', function () {
+          document.querySelector('.avatar-option.selected').classList.remove('selected');
+          this.classList.add('selected');
+          selectedAvatar = this.dataset.avatar;
+        });
+      });
+
+      // 发送留言
+      sendButton.addEventListener('click', function () {
+        const messageText = messageInput.value.trim();
+        if (messageText) {
+          createMessageBox(messageText, selectedAvatar);
+          messageInput.value = '';
+        }
+      });
+
+      // 按Enter键发送
+      messageInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          sendButton.click();
+        }
+      });
+
+      // 创建留言框
+      function createMessageBox(text, avatar) {
+        const messageBox = document.createElement('div');
+        messageBox.className = 'message-box';
+
+        // 随机选择背景颜色
+        const randomColor = colorPalette[Math.floor(Math.random() * colorPalette.length)];
+        messageBox.style.backgroundColor = randomColor;
+
+        // 随机位置 (确保不重叠)
+        let top, left;
+        let attempts = 0;
+        const maxAttempts = 10;
+
+        do {
+          top = Math.random() * 70;
+          left = Math.random() * 70;
+          attempts++;
+        } while (checkOverlap(messageBox, top, left) && attempts < maxAttempts);
+
+        messageBox.style.top = `${top}%`;
+        messageBox.style.left = `${left}%`;
+
+        // 添加头像
+        const avatarSpan = document.createElement('span');
+        avatarSpan.className = 'message-avatar';
+        avatarSpan.textContent = getAvatarEmoji(avatar);
+
+        // 添加内容
+        const contentSpan = document.createElement('span');
+        contentSpan.className = 'message-content';
+        contentSpan.textContent = text;
+
+        // 添加小火苗
+        const flameSpan = document.createElement('span');
+        flameSpan.className = 'message-flame';
+        flameSpan.textContent = '🔥';
+
+        // 组合元素
+        messageBox.appendChild(avatarSpan);
+        messageBox.appendChild(contentSpan);
+        messageBox.appendChild(flameSpan);
+
+        // 添加到留言墙
+        messageWall.appendChild(messageBox);
+      }
+
+      // 检查是否重叠
+      function checkOverlap(newBox, top, left) {
+        const boxes = document.querySelectorAll('.message-box');
+        const newRect = {
+          top: parseFloat(top),
+          left: parseFloat(left),
+          width: 200,
+          height: 60
+        };
+
+        for (const box of boxes) {
+          const rect = box.getBoundingClientRect();
+          const existingRect = {
+            top: parseFloat(box.style.top),
+            left: parseFloat(box.style.left),
+            width: rect.width,
+            height: rect.height
+          };
+
+          if (!(newRect.left > existingRect.left + existingRect.width ||
+            newRect.left + newRect.width < existingRect.left ||
+            newRect.top > existingRect.top + existingRect.height ||
+            newRect.top + newRect.height < existingRect.top)) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      // 获取头像emoji
+      function getAvatarEmoji(avatarNum) {
+        const emojis = ['👦', '👧', '🧑', '👩', '👨', '🧒', '👶'];
+        return emojis[parseInt(avatarNum) - 1] || '👤';
+      }
+
+      // 预加载更多示例留言
+      const sampleMessages = [
+        { text: "火把节快乐！祝大家玩得开心！", avatar: "1" },
+        { text: "今天的表演太精彩了！演员们辛苦了", avatar: "2" },
+        { text: "期待明年的火把节，一定会更精彩", avatar: "3" },
+        { text: "传统文化真有趣，学到了很多知识", avatar: "4" },
+        { text: "火把节的篝火晚会太棒了！", avatar: "5" },
+        { text: "第一次参加火把节，体验非常好", avatar: "6" },
+        { text: "民族服饰展示环节太美了", avatar: "7" },
+        { text: "火把节的美食让人回味无穷", avatar: "1" },
+        { text: "传统舞蹈表演很有感染力", avatar: "2" },
+        { text: "明年还要来参加火把节", avatar: "3" },
+        { text: "火把节的氛围太棒了", avatar: "4" },
+        { text: "感受到了浓厚的民族文化", avatar: "5" }
+      ];
+
+      // 随机分布示例留言
+      sampleMessages.forEach(msg => {
+        createMessageBox(msg.text, msg.avatar);
+      });
+    });
+    //趣味答题
+    const options = document.querySelectorAll('.option');
+    const correctAnswer = 1; // 正确答案是选项1
+
+    options.forEach(option => {
+      option.addEventListener('click', function () {
+        const selectedValue = this.querySelector('input').value;
+        const isCorrect = selectedValue == correctAnswer;
+
+        // 重置所有选项图片
+        document.querySelectorAll('.option-image').forEach(img => {
+          img.src = "素材图/选项原图.png";
+        });
+
+        // 更新当前选项图片
+        const currentImg = this.querySelector('.option-image');
+        if (isCorrect) {
+          currentImg.src = "素材图/选对照片.png"; // 替换为你的正确图片路径
+        } else {
+          currentImg.src = "素材图/选错照片.png"; // 替换为你的错误图片路径
+        }
+      });
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      const quizBoxes = document.querySelectorAll('.quiz-box');
+      const prevBtn = document.getElementById('prev-quiz');
+      const nextBtn = document.getElementById('next-quiz');
+      const progressDots = document.querySelectorAll('.progress-dot');
+      let currentQuiz = 0;
+
+      // 初始化显示第一个问题
+      showQuiz(currentQuiz);
+
+      // 下一题按钮
+      nextBtn.addEventListener('click', function () {
+        if (currentQuiz < quizBoxes.length - 1) {
+          currentQuiz++;
+          showQuiz(currentQuiz);
+        }
+      });
+
+      // 上一题按钮
+      prevBtn.addEventListener('click', function () {
+        if (currentQuiz > 0) {
+          currentQuiz--;
+          showQuiz(currentQuiz);
+        }
+      });
+
+      // 进度点点击事件
+      progressDots.forEach((dot, index) => {
+        dot.addEventListener('click', function () {
+          currentQuiz = index;
+          showQuiz(currentQuiz);
+        });
+      });
+
+      // 显示指定问题
+      function showQuiz(index) {
+        // 隐藏所有问题
+        quizBoxes.forEach(box => {
+          box.classList.remove('active');
+        });
+
+        // 显示当前问题
+        quizBoxes[index].classList.add('active');
+
+        // 更新箭头状态
+        prevBtn.style.visibility = index === 0 ? 'hidden' : 'visible';
+        nextBtn.style.visibility = index === quizBoxes.length - 1 ? 'hidden' : 'visible';
+
+        // 更新进度点
+        progressDots.forEach((dot, i) => {
+          if (i === index) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
+
+      // 为每个问题添加选项点击事件
+      quizBoxes.forEach((box, boxIndex) => {
+        const options = box.querySelectorAll('.option');
+        const correctAnswer = 1; // 每个问题的正确答案，可以根据实际情况设置
+
+        options.forEach(option => {
+          option.addEventListener('click', function () {
+            const selectedValue = this.querySelector('input').value;
+            const isCorrect = selectedValue == correctAnswer;
+
+            // 重置当前问题的所有选项图片
+            box.querySelectorAll('.option-image').forEach(img => {
+              img.src = "素材图/选项原图.png";
+            });
+
+            // 更新当前选项图片
+            const currentImg = this.querySelector('.option-image');
+            if (isCorrect) {
+              currentImg.src = "素材图/选对照片.png";
+              // 2秒后自动跳转到下一题
+              if (boxIndex < quizBoxes.length - 1) {
+                setTimeout(() => {
+                  currentQuiz = boxIndex + 1;
+                  showQuiz(currentQuiz);
+                }, 2000);
+              }
+            } else {
+              currentImg.src = "素材图/选错照片.png";
+            }
+          });
+        });
+      });
+      quizBoxes.forEach((box, boxIndex) => {
+        const options = box.querySelectorAll('.option');
+        const correctAnswer = 2; // 每个问题的正确答案，可以根据实际情况设置
+
+        options.forEach(option => {
+          option.addEventListener('click', function () {
+            const selectedValue = this.querySelector('input').value;
+            const isCorrect = selectedValue == correctAnswer;
+
+            // 重置当前问题的所有选项图片
+            box.querySelectorAll('.option-image').forEach(img => {
+              img.src = "素材图/选项原图.png";
+            });
+
+            // 更新当前选项图片
+            const currentImg = this.querySelector('.option-image');
+            if (isCorrect) {
+              currentImg.src = "素材图/选对照片.png";
+              // 2秒后自动跳转到下一题
+              if (boxIndex < quizBoxes.length - 1) {
+                setTimeout(() => {
+                  currentQuiz = boxIndex + 1;
+                  showQuiz(currentQuiz);
+                }, 2000);
+              }
+            } else {
+              currentImg.src = "素材图/选错照片.png";
+            }
+          });
+        });
+      });
+      quizBoxes.forEach((box, boxIndex) => {
+        const options = box.querySelectorAll('.option');
+        const correctAnswer = 1; // 每个问题的正确答案，可以根据实际情况设置
+
+        options.forEach(option => {
+          option.addEventListener('click', function () {
+            const selectedValue = this.querySelector('input').value;
+            const isCorrect = selectedValue == correctAnswer;
+
+            // 重置当前问题的所有选项图片
+            box.querySelectorAll('.option-image').forEach(img => {
+              img.src = "素材图/选项原图.png";
+            });
+
+            // 更新当前选项图片
+            const currentImg = this.querySelector('.option-image');
+            if (isCorrect) {
+              currentImg.src = "素材图/选对照片.png";
+              // 2秒后自动跳转到下一题
+              if (boxIndex < quizBoxes.length - 1) {
+                setTimeout(() => {
+                  currentQuiz = boxIndex + 1;
+                  showQuiz(currentQuiz);
+                }, 2000);
+              }
+            } else {
+              currentImg.src = "素材图/选错照片.png";
+            }
+          });
+        });
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // 地图相关
+        function resizeImages() {
+          const container = document.getElementById('fire-map');
+          const baseMap = document.getElementById('base-map');
+          const areaImages = document.querySelectorAll('.area-image');
+
+          const containerWidth = container.offsetWidth;
+          const containerHeight = container.offsetHeight;
+          const baseMapWidth = baseMap.naturalWidth;
+          const baseMapHeight = baseMap.naturalHeight;
+
+          const widthRatio = containerWidth / baseMapWidth;
+          const heightRatio = containerHeight / baseMapHeight;
+
+          areaImages.forEach(image => {
+            const originalTop = parseInt(image.dataset.originalTop);
+            const originalLeft = parseInt(image.dataset.originalLeft);
+            const originalWidth = parseInt(image.dataset.originalWidth);
+            const originalHeight = parseInt(image.dataset.originalHeight);
+
+            const newTop = originalTop * heightRatio;
+            const newLeft = originalLeft * widthRatio;
+            const newWidth = originalWidth * widthRatio;
+            const newHeight = originalHeight * heightRatio;
+
+            image.style.top = newTop + 'px';
+            image.style.left = newLeft + 'px';
+            image.style.width = newWidth + 'px';
+            image.style.height = newHeight + 'px';
+          });
+        }
+
+        window.addEventListener('resize', resizeImages);
+        window.addEventListener('load', resizeImages);
+
+        const areaImages = document.querySelectorAll('.area-image');
+        // 动态创建 fire-intro-text 并添加到页面
+        const fireIntroText = document.createElement('div');
+        fireIntroText.classList.add('fire-intro-text');
+        fireIntroText.style.zIndex = '999';
+        fireIntroText.style.position = 'absolute';
+        fireIntroText.style.display = 'none';
+
+        document.body.appendChild(fireIntroText);
+
+        const box1Content = `
+                <div class="box1-content">
+                    <h2>共有</h2>
+                    <span>23334</span>
+                    <p>人与你一同点亮</p>
+                </div>
+            `;
+        const box2Content = `
+                <div class="box2-content">
+                    <ul>
+                        <li>
+                            <div class="col-icon"></div>
+                            <h2 class="col-h2">四川</h2>
+                            <span class="col-span">7895</span>
+                            <p class="col-p">个小火苗</p>
+                        </li>
+                        <li>
+                            <div class="col-icon"></div>
+                            <h2 class="col-h2">云南</h2>
+                            <span class="col-span">6692</span>
+                            <p class="col-p">个小火苗</p>
+                        </li>
+                        <li>
+                            <div class="col-icon"></div>
+                            <h2 class="col-h2">广西</h2>
+                            <span class="col-span">4954</span>
+                            <p class="col-p">个小火苗</p>
+                        </li>
+                        <li>
+                            <div class="col-icon"></div>
+                            <h2 class="col-h2">贵州</h2>
+                            <span class="col-span">3793</span>
+                            <p class="col-p">个小火苗</p>
+                        </li>
+                    </ul>
+                </div>
+            `;
+
+        let clickCount = 0;
+        const fireFrom = document.querySelector('.fire-from');
+        const fire = document.querySelector('.fire');
+        const fireInfoBoxes = document.querySelector('.fire-info-boxes');
+        // 重置所有状态的函数
+        function resetAllStates() {
+          fireIntroText.style.display = 'none';
+          fireIntroText.classList.remove('slide-out');
+          fireFrom.style.display = 'none';
+          fireFrom.classList.remove('slide-out');
+          fire.style.display = 'none';
+          fire.classList.remove('slide-out');
+          fireInfoBoxes.style.display = 'none';
+          fireInfoBoxes.classList.remove('show-boxes');
+          areaImages.forEach(img => {
+            img.src = img.src.replace(img.dataset.newSrc, img.src.split('/').pop().replace('-渐变', '-统一色'));
+            img.style.opacity = 1;
+          });
+        }
+
+        // 设置 fire-from 的 top 值
+        fireFrom.style.top = '40px'; // 你可以根据需要修改这个值
+        fireInfoBoxes.style.display = 'flex';
+        fireInfoBoxes.style.flexDirection = 'column';
+        fireInfoBoxes.style.alignItems = 'center';
+        fireInfoBoxes.style.gap = '15px';
+        areaImages.forEach((image) => {
+          image.addEventListener('click', () => {
+            const intro = image.dataset.intro;
+            if (!intro) {
+              console.error('intro 为空，请检查 data-intro 属性');
+              return;
+            }
+            resetAllStates();
+            if (clickCount === 0) {
+              // 第一次点击逻辑
+              fireIntroText.textContent = intro;
+
+              const rect = image.getBoundingClientRect();
+              fireIntroText.style.top = '1400px'; // 修改顶部位置
+              fireIntroText.style.left = '500px'; // 修改左侧位置
+              fireIntroText.style.display = 'block';
+              fireIntroText.style.opacity = 1;
+              fireFrom.style.display = 'block';
+              fireFrom.style.opacity = 1;
+              fire.style.display = 'block';
+              fire.style.opacity = 1;
+
+              image.src = image.dataset.newSrc;
+              image.style.opacity = 1;
+              clickCount++;
+            } else if (clickCount === 1) {
+              // 第二次点击逻辑
+              const performSecondClickActions = () => {
+                fireIntroText.style.display = 'none';
+                fireIntroText.classList.remove('slide-out');
+                fireFrom.style.display = 'none';
+                fireFrom.classList.remove('slide-out');
+                fire.style.display = 'none';
+                fire.classList.remove('slide-out');
+
+                fireInfoBoxes.style.display = 'flex';
+                fireInfoBoxes.classList.add('show-boxes');
+
+                document.getElementById('fire-box1').innerHTML = box1Content;
+                document.getElementById('fire-box2').innerHTML = box2Content;
+
+                areaImages.forEach((img, index) => {
+                  setTimeout(() => {
+                    img.src = img.dataset.newSrc;
+                    img.style.opacity = 1;
+                  }, index * 200);
+                });
+                const pElements = document.querySelectorAll('.fire-info-box p');
+                pElements.forEach(p => {
+                  p.style.width = '200px'; // 你可以根据需要修改这个值
+                });
+              };
+
+              fireIntroText.classList.add('slide-out');
+              fireFrom.classList.add('slide-out');
+              fire.classList.add('slide-out');
+              const animationDuration = 500;
+              setTimeout(performSecondClickActions, animationDuration);
+
+              clickCount = 0;
+            }
+          });
+        });
+        document.addEventListener('click', (e) => {
+          if (!e.target.closest('.area-image') && !e.target.closest('.fire-info-boxes')) {
+            resetAllStates();
+          }
+        });
+        document.addEventListener('click', (e) => {
+          if (!e.target.closest('.area-image') && !e.target.closest('.fire-info-boxes')) {
+            const fireInfoBoxes = document.querySelector('.fire-info-boxes');
+            if (fireInfoBoxes.classList.contains('show-boxes')) {
+              fireInfoBoxes.classList.remove('show-boxes');
+              setTimeout(() => {
+                fireInfoBoxes.style.display = 'none';
+              }, 500);
+            }
+          }
+        });
+        // 修改 fire-info-box 的宽度
+        const fireInfoBoxesElements = document.querySelectorAll('.fire-info-box');
+        fireInfoBoxesElements.forEach(box => {
+          box.style.width = '500px'; // 你可以根据需要修改这个值
+          box.position = 'relative';
+          box.style.top = '200px'; // 你可以根据需要修改这个值
+        });
+
+      });
+
+  </script>
+</body>
+
+</html>

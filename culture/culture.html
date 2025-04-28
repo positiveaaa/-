@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="test2.css">
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <div class="navbar-part">
+    <!-- 导航栏 -->
+    <div class="navbar">
+      <!-- 左侧文字 -->
+      <div class="logo"> 火把节</div>
+      <!-- 中间导航链接 -->
+      <div class="nav-links">
+        <a href="../index.html">首页</a>
+        <a href="culture.html" class="active">火把节文化</a>
+        <a href="../study/study.html">学习与研究</a>
+        <a href="../portect/protect.html">保护与传承</a>
+        <a href="../community/community.html">互动社区</a>
+
+      </div>
+      <!-- 右侧搜索框 -->
+      <div class="search-box">
+        <input type="text" placeholder="search">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path fill="#d6bcb2"
+            d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+        </svg>
+      </div>
+
+    </div>
+    <div class="map-header-container">
+      <div class="map-header">地理分布图</div>
+    </div>
+  </div>
+  <!-- 地图部分 -->
+
+  <div class="map-part">
+
+
+
+    <div id="map-container">
+      <img id="base-map" src="素材图/地图-中国-裁切版2.png" alt="Base Map">
+      <img id="outline-map" src="素材图/地图-线-裁切版.png" alt="Outline Map">
+      <img class="area-image" src="素材图/地图-云南-cq.png" alt="云南" data-original-top="557" data-original-left="360"
+        data-original-width="179" data-original-height="185"
+        data-intro='<h2 class="text-2xl font-bold mb-2">云南</h2><ul><li><span class="font-bold">火把节介绍：</span>云南彝族火把节是彝族地区的重要传统节日，流行于云南彝族聚居区。</li><li><span class="font-bold">非遗特色标志地位：</span>云南楚雄彝族火把节入选国家级非物质文化遗产名录。</li><li><span class="font-bold">重点城市：</span>楚雄、大理、昆明、石林。</li></ul>'
+        data-intro-img="素材图/1.jpg">
+      <img class="area-image" src="素材图/地图-广西-cq .png" alt="广西" data-original-top="630" data-original-left="509"
+        data-original-width="149" data-original-height="116"
+        data-intro='<h2 class="text-2xl font-bold mb-2">广西</h2><ul><li><span class="font-bold">火把节介绍：</span>广西彝族火把节又称“荞年节”，与荞麦丰收有关。</li><li><span class="font-bold">非遗特色标志地位：</span>广西隆林彝族火把节被列入省级非物质文化遗产名录。</li><li><span class="font-bold">重点城市：</span>隆林。</li></ul>'
+        data-intro-img="素材图/2.jpg">
+      <img class="area-image" src="素材图/地图-贵州-cq.png" alt="贵州" data-original-top="563" data-original-left="490"
+        data-original-width="119" data-original-height="104"
+        data-intro='<h2 class="text-2xl font-bold mb-2">贵州</h2><ul><li><span class="font-bold">火把节介绍：</span>贵州彝族火把节是彝族地区的重要传统节日，流行于贵州彝族聚居区。</li><li><span class="font-bold">非遗特色标志地位：</span>贵州赫章彝族火把节入选国家级非物质文化遗产名录。</li><li><span class="font-bold">重点城市：</span>赫章。</li></ul>'
+        data-intro-img="素材图/3.jpg">
+      <img class="area-image" src="素材图/地图-四川-cq.png" alt="四川" data-original-top="449" data-original-left="381"
+        data-original-width="211" data-original-height="184"
+        data-intro='<h2 class="text-2xl font-bold mb-2">四川</h2><ul><li><span class="font-bold">火把节介绍：</span>四川彝族火把节是彝族最重要的传统节日之一，流行于四川凉山彝族自治州。</li><li><span class="font-bold">非遗特色标志地位：</span>凉山彝族火把节入选国家级非物质文化遗产名录。</li><li><span class="font-bold">重点城市：</span>西昌、昭觉、布拖。</li></ul>'
+        data-intro-img="素材图/4.jpg">
+    </div>
+    <div id="image-box">
+      <img src="素材图/地图-云南火把.jpg" alt="云南" data-area="1">
+      <img src="素材图/地图-广西火把.jpg" alt="广西" data-area="2">
+      <img src="素材图/地图-贵州火把3.jpg" alt="贵州" data-area="3">
+      <img src="素材图/地图-四川火把.jpg" alt="四川" data-area="4">
+    </div>
+    <div class="intro-box"></div>
+
+    <script>
+      function resizeImages() {
+        const container = document.getElementById('map-container');
+        const baseMap = document.getElementById('base-map');
+        const areaImages = document.querySelectorAll('.area-image');
+
+        const containerWidth = container.offsetWidth;
+        const containerHeight = container.offsetHeight;
+        const baseMapWidth = baseMap.naturalWidth;
+        const baseMapHeight = baseMap.naturalHeight;
+
+        const widthRatio = containerWidth / baseMapWidth;
+        const heightRatio = containerHeight / baseMapHeight;
+
+        areaImages.forEach(image => {
+          const originalTop = parseInt(image.dataset.originalTop);
+          const originalLeft = parseInt(image.dataset.originalLeft);
+          const originalWidth = parseInt(image.dataset.originalWidth);
+          const originalHeight = parseInt(image.dataset.originalHeight);
+
+          const newTop = originalTop * heightRatio;
+          const newLeft = originalLeft * widthRatio;
+          const newWidth = originalWidth * widthRatio;
+          const newHeight = originalHeight * heightRatio;
+
+          image.style.top = newTop + 'px';
+          image.style.left = newLeft + 'px';
+          image.style.width = newWidth + 'px';
+          image.style.height = newHeight + 'px';
+        });
+
+        const mapContainer = document.getElementById('map-container');
+        const imageBox = document.getElementById('image-box');
+        const images = imageBox.querySelectorAll('img');
+
+        const mapHeight = mapContainer.offsetHeight;
+        imageBox.style.height = mapHeight + 'px';
+        images.forEach(img => {
+          img.style.height = mapHeight + 'px';
+        });
+      }
+
+      window.addEventListener('resize', resizeImages);
+      window.addEventListener('load', resizeImages);
+
+      const areaImages = document.querySelectorAll('.area-image');
+      const imageBox = document.getElementById('image-box');
+      const introBox = document.querySelector('.intro-box');
+
+      areaImages.forEach((image, index) => {
+        image.addEventListener('mouseover', () => {
+          const intro = image.dataset.intro;
+          const introImgSrc = image.dataset.introImg;
+          introBox.innerHTML = intro;
+          introBox.style.display = 'block';
+
+          const targetImage = imageBox.querySelector(`img[data-area="${index + 1}"]`);
+          targetImage.style.display = 'block';
+        });
+
+        image.addEventListener('mouseout', () => {
+          introBox.style.display = 'none';
+          const targetImage = imageBox.querySelector(`img[data-area="${index + 1}"]`);
+          targetImage.style.display = 'none';
+        });
+      });
+    </script>
+  </div>
+  <!-- 核心文化内涵 -->
+  <div class="core-culture">
+    <div class="big-box">
+      <div class="first-box">
+        <p>火把节的核心文化内涵</p>
+      </div>
+      <div class="second-box">
+        <div class="small-box">
+          <img src="素材图/文化内涵-自然崇拜.jpg" alt="自然崇拜">
+          <div class="tiny-box">
+            <h1>自然崇拜</h1>
+            <p>火把节通过火把燃烧，表达对自然的敬畏和崇拜，象征着光明和希望。</p>
+          </div>
+        </div>
+        <div class="small-box">
+          <img src="素材图/文化内涵-祖先纪念.jpg" alt="祖先纪念">
+          <div class="tiny-box">
+            <h1>祖先纪念</h1>
+            <p>节日中点燃火把，纪念先祖，表达对他们的敬仰和怀念，传承文化记忆。</p>
+          </div>
+        </div>
+        <div class="small-box">
+          <img src="素材图/文化内涵-社区凝聚.jpg" alt="社区凝聚">
+          <div class="tiny-box">
+            <h1>社区凝聚</h1>
+            <p>通过集体活动，如火把舞，增强社区成员间的联系，促进团结和和谐。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 庆典活动 -->
+  <div class="ceremony-part">
+    <div class="title-box">
+      <h1>庆典活动</h1>
+    </div>
+    <div class="container">
+
+      <div class="left-section">
+        <div class="cy-box-container">
+          <div class="cy-box" data-image="素材图/庆典活动-特色仪式.jpg">
+            <div class="fixed-part">
+              <div class="number">01</div>
+              <h2>特色仪式</h2>
+            </div>
+            <div class="hidden-part">
+              <h3>特色仪式</h3>
+              <p>火把节的特色仪式包括点燃火把，跳火把舞等，这些仪式不仅是节日的重要组成部分，也具有深厚的文化意义。</p>
+            </div>
+          </div>
+          <div class="cy-box" data-image="素材图/庆典活动-民俗活动.jpg">
+            <div class="fixed-part">
+              <div class="number">02</div>
+              <h2>民俗活动</h2>
+            </div>
+            <div class="hidden-part">
+              <h3>民俗活动</h3>
+              <p>民俗活动丰富多样，包括摔跤、赛马等传统游戏和表演，增加了节日的趣味性，展示了当地的文化特色。</p>
+            </div>
+          </div>
+          <div class="cy-box" data-image="素材图/庆典活动-民俗饮食.jpg">
+            <div class="fixed-part">
+              <div class="number">03</div>
+              <h2>民俗饮食</h2>
+            </div>
+            <div class="hidden-part">
+              <h3>民俗饮食</h3>
+              <p>节日中的传统美食，如烤肉、米酒等，不仅满足了人们的味蕾，也体现了当地的饮食文化，是节日不可或缺的一部分。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-section">
+        <img id="main-image" src="素材图/庆典活动.png" alt="庆典活动">
+      </div>
+    </div>
+    <script>
+      const cyBoxes = document.querySelectorAll('.cy-box');
+      const mainImage = document.getElementById('main-image');
+
+      cyBoxes.forEach((box) => {
+        box.addEventListener('mouseenter', () => {
+          const imageUrl = box.dataset.image;
+          mainImage.src = imageUrl;
+        });
+      });
+    </script>
+  </div>
+  <!-- 历史发展 -->
+  <div class="history-part">
+    <!-- 上部分盒子：历史发展 -->
+    <div class="header"><span>历史发展</span></div>
+    <!-- 下部盒子 -->
+    <div class="box">
+      <!-- 远古时期 -->
+      <div class="history-1">
+        <div class="left">
+          <div class="title-left">
+            远古时期<br>
+            <p>（公元前）</p>
+          </div>
+          <div class="intro-left">
+            <ul>
+              <li>白族《火烧宋明楼》传说南诏王皮逻阁统一六诏的传说（融合火把节与权力象征）。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+          <div class="title-right">神话起源</div>
+          <div class="dashed-dot-box">
+            <div class="dashed-line"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="intro-right">
+            <ul>
+              <li>彝族创世史诗《勒俄特依》记载：火把节与英雄支格阿鲁用火灭虫的神话（约公元前五世纪口头传承）。</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 添加图片 -->
+        <img class="image" src="素材图/｜来云南7年第1次去楚雄火把节是什么体验 - 气泡椒盐小饼.png" alt="示例图片">
+      </div>
+      <!-- 汉唐时期 -->
+      <div class="history-2">
+        <div class="left">
+          <div class="title-left">
+            汉唐时期<br>
+            <p> （公元前206年-公元前907年）</p>
+          </div>
+          <div class="hy2-left-img">
+            <img src="素材图/纹理-1.png" alt="">
+          </div>
+          <div class="intro-left">
+            <ul>
+              <li>唐代樊绰《蛮书》（863年）：“六月二十四日，夜燎火于门，谓之星回节”-明确节日名称与时间。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hy2-span1">
+         
+          <p><br>5世纪</p>
+        </div>
+        <div class="hy2-span2">
+          863
+          
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+          <div class="title-right">文献初现 </div>
+          <div class="dashed-dot-box">
+            <div class="dashed-line"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="intro-right">
+            <ul>
+              <li>《后汉书·南蛮传》（5世纪）：“夷人畏鬼，以火燎瘴疠” - 早期火崇拜记载。</li>
+            </ul>
+          </div>
+          <div class="hy2-right-img">
+            <img src="素材图/历史发展-汉唐.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- 宋元明清 -->
+      <div class="history-3">
+        <div class="left">
+          <div class="title-left">
+            宋元明清<br>
+            <p> （960 - 1912年）</p>
+          </div>
+          <div class="intro-left">
+            <ul>
+              <li>明代《南诏野史》 （16世纪）：明确火把节与白族历史事件关联。</li>
+            </ul>
+          </div>
+          <div class="hy3-left-img">
+            <img src="素材图/彝族图案-01.png" alt="">
+          </div>
+        </div>
+        <div class="middle"></div>
+        <div class="hy3-span1"> 14<br>
+          <p>世纪</p>
+        </div>
+        <div class="hy3-span2"> 16<br>
+          <p>世纪</p>
+        </div>
+        <div class="hy3-span3"> 17<br>
+          32
+        </div>
+        <div class="right">
+          <div class="title-right">文化定型</div>
+          <div class="dashed-dot-box">
+            <div class="dashed-line"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="intro-right">
+            <ul>
+              <li>元代李京《云南志略》 （14世纪）： “六月二十四日通夕以高竿缚火炬照天”-描述火把规模。</li>
+              <li id="three">清代《楚雄府志》 (1732年)： “彝众持火照田，击鼓逐疫”-记录农业祈福功能。</li>
+            </ul>
+          </div>
+          <div class="hy3-right-img1"><img src="素材图/背景纹理-4.png" alt=""></div>
+          <div class="hy3-right-img2"><img src="素材图/素材-1.png" alt=""></div>
+        </div>
+      </div>
+      <!-- 近现代 -->
+      <div class="history-4">
+        <div class="left">
+          <div class="title-left">
+            近现代<br>
+            <p> （1912 - 2000年）</p>
+          </div>
+          <div class="intro-left">
+            <ul>
+              <li>1930年代：民族学家林耀华《凉山彝家》首次系统记录火把节仪式。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="middle"></div>
+        <div class="hy4-span1"> 19<br>
+          30
+        </div>
+        <div class="hy4-span2"> 19<br>
+          80
+        </div>
+        <div class="right">
+          <div class="title-right">民俗学研究</div>
+          <div class="dashed-dot-box">
+            <div class="dashed-line"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="intro-right">
+            <ul>
+              <li>1980年代：云南大学开展“西南火把节文化圈”田野调查，确认多民族共享特征。</li>
+            </ul>
+          </div>
+          <div class="hy4-right-img">
+            <img src="素材图/历史发展-当代.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- 当代 -->
+      <div class="history-5">
+        <div class="left">
+          <div class="title-left">
+            当代<br>
+            <p> （2000年至今）</p>
+          </div>
+          <div class="intro-left">
+            <ul>
+              <li>2006年：火把节列入首批国家级非物质文化遗产名录(编号：IX - 10)。</li>
+              <li id="three2">2021年：云南楚雄推出“数字火把节”，通过AR技术还原传统点火仪式。</li>
+            </ul>
+          </div>
+          <div class="hy5-left-img"><img src="素材图/历史发展5-左.png" alt=""></div>
+        </div>
+        <div class="middle"></div>
+        <div class="hy5-span1"> 20<br>
+          06
+        </div>
+        <div class="hy5-span2"> 20<br>
+          10
+        </div>
+        <div class="hy5-span3"> 20<br>
+          21
+        </div>
+        <div class="right">
+          <div class="title-right">当代</div>
+          <div class="dashed-dot-box">
+            <div class="dashed-line"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="intro-right">
+            <ul>
+              <li>2010年：四川凉山举办“中国·凉山彝族国际火把节”，首次引入全球直播。</li>
+            </ul>
+          </div>
+          <div class="hy5-right-img"><img src="素材图/历史发展5-右.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 联系我们 -->
+  <div class="footer-part">
+    <div class="footer">
+      <div class="footer-content">
+
+        <div class="footer-row">
+          <h4>网站服务</h4>
+          <h4>关于我们</h4>
+          <h4>联系我们</h4>
+        </div>
+
+        <div class="footer-row">
+          <a href="#">快速导航</a>
+          <a href="#">公司介绍</a>
+          <a href="#">用户服务</a>
+        </div>
+
+        <div class="footer-row">
+          <a href="#">非遗地图</a>
+          <p>客服邮箱：XXXXXXX@XXX</p>
+        </div>
+
+        <div class="footer-row">
+          <a href="#">网站访问</a>
+          <a href="#">位置咨询</a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <a href="#">相关链接</a>
+        <a href="#">隐私政策</a>
+        <a href="#">版权声明</a>
+        <a href="#">留言板</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
